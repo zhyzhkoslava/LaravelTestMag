@@ -18,7 +18,7 @@
     }
 
     // "http://localhost:8080/index.php"
-    $allowed_hosts = 'http://localhost:8080/index.php';
+    $allowed_hosts = 'http://localhost:8080/index.blade.php';
 
     $app_path = preg_replace("#[^/]+$#", '', $allowed_hosts);
     $app_path = preg_replace('/public/', '', $app_path);
