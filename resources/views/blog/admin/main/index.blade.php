@@ -1,25 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.app_admin')
 
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        Dashboard ADMIN
-                    </div>
 
-                    <div class="card-body">
-                        @if (session('admin'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('admin') }}
-                            </div>
-                        @endif
+    <section class="content-header">
+        @component('blog.admin.components.breadcrumbs')
+            @slot('title') Control Panel @endslot
+            @slot('parent') Main @endslot
+            @slot('active') @endslot
+        @endcomponent
+    </section>
 
-                        ADMIN!
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
